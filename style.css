@@ -27,7 +27,8 @@ div {
   padding: 5px;
 }
 
-label,p {
+label,
+p {
   justify-self: center;
   font-weight: bold;
 }
