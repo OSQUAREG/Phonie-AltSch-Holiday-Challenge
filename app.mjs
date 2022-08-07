@@ -43,7 +43,7 @@ let networkPrefix = {
   "0907": "./img/airtel_logo.png",
   "0901": "./img/airtel_logo.png",
 
-  // for 9Mobile prefix
+  // for 9mobile prefix
   "0809": "./img/9mobile_logo.png",
   "0817": "./img/9mobile_logo.png",
   "0818": "./img/9mobile_logo.png",
@@ -53,11 +53,11 @@ let networkPrefix = {
 
 
 let telInput = document.getElementById("tel");
-let showLogo = document.querySelector('.logo');
+let showLogo = document.getElementById("network-logo");
 telInput.addEventListener("input", checkNetwork)
 
-function checkNetwork(event) {
-  let number = event.target.value;
+function checkNetwork() {
+  let number = telInput.value
 
   // to take care of +234 prefix
   if (number.startsWith("+234")) {
@@ -66,7 +66,7 @@ function checkNetwork(event) {
 
   for (let prefix in networkPrefix) {
     if (number.startsWith(prefix)) {
-      showLogo.innerHTML = `<p id="text" style="font-style: italic; font-weight: normal;">See network carrier logo below:</p> <img src=${networkPrefix[prefix]} alt="network-logo" id="logo">`
+      showLogo.innerHTML = `<p id="text" style="font-style: italic; font-weight: normal;">See carrier logo below:</p> <img src=${networkPrefix[prefix]} alt="network-logo" id="logo">`
     }
   }
 }

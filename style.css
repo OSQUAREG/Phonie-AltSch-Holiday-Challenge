@@ -14,22 +14,20 @@ body {
   margin-bottom: 50px;
 }
 
-section,
-h2 {
+section {
+  display: inline-grid;
   margin: 0 auto;
-  padding: 0 30%;
-  align-self: center;
+  padding: 0 5%;
 }
 
-div {
+div,
+h2 {
   display: grid;
-  align-self: center;
   padding: 5px;
 }
 
 label,
 p {
-  justify-self: center;
   font-weight: bold;
 }
 
@@ -43,14 +41,7 @@ button {
 }
 
 img {
-  width: 80px;
+  width: 100px;
   justify-self: center;
   padding: 5px;
-}
-
-button {
-  width: 50%;
-  padding: 7px;
-  font-weight: bold;
-  justify-self: center;
 }
